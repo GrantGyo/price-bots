@@ -1,6 +1,6 @@
 FROM python:3.8-alpine3.13
 
-WORKDIR /BadgerDiscordBot
+WORKDIR /FeiProtocolDiscordBot
 
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 

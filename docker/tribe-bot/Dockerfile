@@ -1,6 +1,6 @@
 FROM python:3.8-alpine3.13
 
-WORKDIR /BadgerDiscordBot
+WORKDIR /FeiProtocolDiscordBot
 
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
@@ -22,4 +22,4 @@ RUN apk del \
 
 COPY . .
 
-CMD [ "python", "scripts/run_bbadger_bot.py" ]
+CMD [ "python", "scripts/run_price_bots.py" ]

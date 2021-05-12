@@ -18,7 +18,7 @@ UPDATE_INTERVAL_SECONDS = 45
 cache = {}
 
 
-class PriceBot(discord.Client):
+class TribeBot(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.logger = logging.getLogger("price-bot")

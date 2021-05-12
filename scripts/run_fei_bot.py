@@ -8,21 +8,13 @@ sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../src"))
 )
 
-from tribe_bot import TribeBot
 from fei_bot import FeiBot
 
 load_dotenv()
 
 loop = asyncio.get_event_loop()
 
-# establishes Tribe Bot    
-tribe_client = TribeBot(
-        coingecko_token_id="tribe-2",
-        token_display="TRIBE",
-        token_address=os.getenv("TRIBE_ADDRESS"),
-        discord_id=os.getenv("BOT_ID_TRIBE"),
-    )
-    # establishes Fei Bot    
+# establishes Fei Bot    
 fei_client = FeiBot(
         coingecko_token_id="fei-protocol",
         token_display="Fei",
@@ -30,6 +22,6 @@ fei_client = FeiBot(
         discord_id=os.getenv("BOT_ID_FEI"),
     )
    
-loop.create_task(tribe_client.start(os.getenv("BOT_TOKEN_TRIBE")))
-       
+loop.create_task(fei_client.start(os.getenv("BOT_TOKEN_FEI")))
+   
 loop.run_forever()
